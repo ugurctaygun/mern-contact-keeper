@@ -6,6 +6,9 @@ const app = express();
 //Connect Database
 connectDB();
 
+//Inıt Middleware
+app.use(express.json({ extende: false }));
+
 app.get('/', (req, res) => res.json({msg: 'Welcome to the Contact Keeper Apı'}));
 
 app.use('/api/users',require('./routes/users'));

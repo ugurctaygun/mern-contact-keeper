@@ -21,6 +21,12 @@ and call it as a method to initiate.
 
 Express-js-validator is used to limit the scope of the data that can be sent to the api
 
+JWT Web Token
+
+Used to create a unique web token for users.
+routes/users.js
+jwt.io
+
 BCRYPT
 
 is used to hash the password or objects that are required to be hashed while passing them to the database
