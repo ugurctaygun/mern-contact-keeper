@@ -9,6 +9,8 @@ npm i -D nodemon concurrently
 
 npm run server
 
+"dev": "concurrently \"npm run server\" \"npm run client\"" at package.json to run client and server concurrently
+
 MONGOOSE
 
 Create models for keeping the schemas of database, userSchema (user: type:string etc)
@@ -20,6 +22,12 @@ Create a config file of db, introduce your database variables there and call you
 and call it as a method to initiate.
 
 Express-js-validator is used to limit the scope of the data that can be sent to the api
+
+Authentication
+
+Create a middleware function to check if the use has the required token to access the private routes.
+See middleware/auth.js - routes/auth.js
+
 
 JWT Web Token
 
