@@ -5,9 +5,13 @@ import Navbar from './components/layout/Navbar';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import ContactState from './context/Contact/ContactState'
+import AuthState from './context/Auth/AuthState';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
 
 const App = ( ) => {
   return (
+    <AuthState>
     <ContactState>
     <Router>
       <Fragment>
@@ -16,11 +20,14 @@ const App = ( ) => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
           </Switch>
         </div>
      </Fragment>
     </Router> 
     </ContactState>
+    </AuthState>
   );
 }
 
